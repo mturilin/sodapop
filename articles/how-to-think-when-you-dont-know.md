@@ -1,5 +1,7 @@
 # How to Think When You Don’t Know
 
+*This essay started with a simple question: could the useful ideas in Annie Duke’s* Thinking in Bets *have been expressed more crisply than they are in a full book? The goal here is to distill the core framework for making decisions under uncertainty into a tighter long-form essay—keeping the ideas that matter, stripping away repetition, and extending the framework where it becomes more useful in practice.*
+
 Most important decisions are made before the facts are available.
 
 You hire someone before you know whether they will perform. You launch a product before you know whether customers will care. You choose a treatment before you know whether it will work. You invest before you know what the market will do. You decide whether to trust someone before you know what they will do next.
