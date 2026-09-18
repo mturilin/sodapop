@@ -2,912 +2,156 @@
 
 *This essay started with a simple question: could the useful ideas in Annie Duke’s* Thinking in Bets *have been expressed more crisply than they are in a full book? The goal here is to distill the core framework for making decisions under uncertainty into a tighter long-form essay—keeping the ideas that matter, stripping away repetition, and extending the framework where it becomes more useful in practice.*
 
-Most important decisions are made before the facts are available.
+Most important decisions have to be made before the facts are available. You hire someone before you know whether they will perform. You launch a product before you know whether customers will care. You invest before you know what the market will do. You choose a treatment before you know whether it will work. You make a strategic commitment before you know what competitors will do next.
 
-You hire someone before you know whether they will perform. You launch a product before you know whether customers will care. You choose a treatment before you know whether it will work. You invest before you know what the market will do. You decide whether to trust someone before you know what they will do next.
+Then reality arrives, and the mind begins rewriting history.
 
-Then reality happens.
+A product succeeds, so the strategy suddenly seems obvious. An investment loses money, so the decision seems foolish. A candidate becomes a star, so the interview process appears validated. A risky shortcut works, so the risk looks smaller in retrospect. We naturally use the outcome to tell ourselves a story about the quality of the decision that came before it.
 
-And the mind immediately rewrites history.
+That is the central problem. Decisions are made under uncertainty, but outcomes are observed with certainty. If we judge the first entirely through the second, we become bad students of our own experience.
 
-The product succeeds, so the strategy seems brilliant. The investment loses money, so the decision seems foolish. The candidate becomes a star, so the interview process seems validated. A risky shortcut works, so the risk suddenly appears smaller than it was.
+The useful idea behind thinking in bets is that a decision should be evaluated using the information that was available when the decision was made. An outcome is evidence, but it is not a verdict. A good decision can produce a bad outcome because the world contains randomness. A bad decision can produce a good outcome for the same reason.
 
-This is one of the central problems of judgment: we evaluate decisions using information that was unavailable when the decision was made.
+Once you take that distinction seriously, a whole set of practical habits follows: express beliefs in probabilities, identify the assumptions carrying most of the risk, update when new evidence arrives, size bets according to downside and reversibility, and keep enough records that you can learn from outcomes without rewriting the past.
 
-A better discipline starts with a simple distinction.
+## Decisions are bets on uncertain futures
 
-A decision is a choice made under uncertainty. An outcome is one realization from the set of things that could have happened afterward.
+Calling a decision a “bet” can sound more dramatic than it is. It simply means that every meaningful choice commits resources to one possible future while giving up alternatives. Hiring one person means not hiring another. Building feature A means feature B waits. Expanding into one market consumes capital and attention that could have gone somewhere else.
 
-Those are different objects.
+Every important decision therefore contains an implicit statement: *I believe this future is sufficiently likely, and sufficiently valuable, that I am willing to act on it.*
 
-If you learn to keep them separate, a surprising amount of bad reasoning disappears.
+The difficulty is that people rarely make the bet explicit. We compress a bundle of assumptions into a sentence such as “this product will work,” “this candidate is strong,” or “this market is attractive.” Those statements sound clear, but they hide the actual structure of the decision.
 
-## Decisions and outcomes
+Take a company deciding whether to launch an AI coding product. The apparent question is whether the product will succeed. Underneath that are many separate beliefs: developers must have a painful enough problem; the model must solve enough of that problem; the product must become reliable enough to earn trust; distribution must work; competitors must not erase the advantage too quickly; and the economics must eventually make sense.
 
-Imagine two people each have $10,000.
+The first useful move is to unpack the bet. Ask what has to be true for the decision to work, and then ask which of those things is both important and uncertain. Usually one or two assumptions carry much more of the risk than the rest.
 
-Anna puts all of hers into a random cryptocurrency because someone at a party says it will double. It does.
+This is where decision-making starts to become practical. If the entire business depends on whether customers will pay $100 per month, the most valuable work may be testing willingness to pay. If technical feasibility is the real uncertainty, market research will not help much. If success depends on a distribution partnership, polishing product details may be premature.
 
-Ben builds a diversified portfolio after studying his financial goals, time horizon, and risk tolerance. The market crashes the following month and his portfolio falls 20%.
+The point is to locate the load-bearing assumptions. Once they are visible, uncertainty becomes something you can often reduce rather than merely discuss.
 
-Anna made the worse decision.
+## Replace certainty with probability
 
-Ben got the worse outcome.
+People are naturally drawn to categorical language. “This will work.” “She’s a strong candidate.” “We’ll ship in June.” “The competitor won’t catch us.” The world usually does not deserve that level of certainty.
 
-This feels obvious when written down. In daily life, people confuse the two constantly.
+A better habit is to attach rough probabilities to important beliefs. “I think there is a 70% chance we reach 100,000 weekly users within a year” is a much more useful statement than “I think customers will adopt it.” The number does not need to be scientifically precise. Its value is that it forces you to reveal how strongly you actually believe the claim.
 
-A good decision can produce a bad outcome because the world contains randomness. A bad decision can produce a good outcome for exactly the same reason.
+This matters because ordinary language hides enormous differences. Two executives may both say that a project is “likely to succeed,” while one means 55% and the other means 90%. They appear to agree until someone asks for a number.
 
-The technical word for the mistake of judging a decision mainly by its outcome is **resulting**.
+Probability also makes a belief easier to inspect. If you say 70%, someone can reasonably ask why. Which evidence pushed you above 50%? Which assumptions are doing most of the work? What would move you to 80%? What would push you down to 40%?
 
-Resulting is seductive because outcomes are visible and probabilities are invisible.
+That changes the quality of disagreement. Instead of arguing over conclusions, people can compare the models producing those conclusions.
 
-You can see that the company failed.
+This is close to the spirit of Bayesian reasoning, even if you never write down Bayes’ theorem. You begin with a prior belief, observe evidence, and update. The essential discipline is not the mathematics. It is the willingness to let your beliefs move.
 
-You cannot directly see that, at the time of investment, it had a 70% chance of succeeding.
+Suppose you believe there is a 70% chance that a new product will succeed. Early customer testing then goes badly. The wrong response is to search immediately for reasons the evidence “doesn’t count.” Maybe the sample really is too small. Maybe the customers were unrepresentative. But those explanations should themselves be tested rather than used as automatic defenses.
 
-You can see that the surgery caused a complication.
+The better question is: *How much should this evidence change my probability?*
 
-You cannot see the alternate worlds in which declining the surgery produced even worse outcomes.
+If your original thesis depended on customers understanding the product immediately, repeated confusion should move your belief substantially. If the thesis never assumed instant comprehension, the same evidence should matter less. Updating is not simply reacting to bad news; it is asking how surprising the evidence would be if your current model were correct.
 
-You can see that an employee you almost rejected became exceptional.
-
-You cannot see the hundreds of similar hiring decisions in parallel universes.
-
-Good decision-making therefore requires a kind of intellectual time travel.
-
-You have to return to the moment the decision was made and ask:
-
-**Given what was knowable then, was this a reasonable choice?**
-
-That question is far more useful than asking whether things worked out.
-
-## Think in probabilities
-
-People naturally prefer categorical statements.
-
-“This will work.”
-
-“She’s a strong candidate.”
-
-“This market is going up.”
-
-“The project will be finished by June.”
-
-Reality rarely deserves that level of certainty.
-
-A more accurate statement looks like this:
-
-“There is roughly a 70% chance this works.”
-
-That small change forces the mind to expose uncertainty.
-
-Suppose your team is considering launching a new product.
-
-Instead of saying:
-
-> I think customers will adopt it.
-
-Say:
-
-> I think there is a 65% chance that we reach 100,000 weekly users within a year.
-
-Now the statement can be examined.
-
-Why 65%?
-
-What assumptions produce that number?
-
-What evidence would move it to 80%?
-
-What evidence would move it to 40%?
-
-What are the major failure modes?
-
-The exact number is less important than the discipline required to produce it.
-
-Probability forces ambiguity into the open.
-
-It also makes disagreement more productive.
-
-Two executives might both say:
-
-> I think this is likely to work.
-
-One may privately mean 55%.
-
-The other may mean 90%.
-
-They appear to agree until somebody asks for a number.
-
-Probability reveals the actual shape of belief.
-
-## Confidence is part of the belief
-
-Every belief contains at least two pieces of information:
-
-**What you think is true.**
-
-And:
-
-**How confident you are.**
-
-Most conversations communicate only the first.
-
-“I think the competitor will launch this year.”
-
-That statement hides an important variable.
-
-Maybe the speaker means:
-
-> I’m almost certain.
-
-Or:
-
-> Slightly more likely than not.
-
-Those are very different claims.
-
-A disciplined thinker attaches confidence to important beliefs.
-
-You might say:
-
-> My current estimate is a 60% chance they launch this year. The strongest evidence is their hiring pattern, but I have little visibility into internal product readiness.
-
-That is a stronger statement because it describes both the conclusion and the quality of the evidence behind it.
-
-This also creates room for change.
-
-If someone later shows you convincing evidence that the competitor has delayed its launch, you can update your estimate.
-
-You have not contradicted yourself.
-
-You have learned something.
-
-## Beliefs should move
-
-People often treat changing their mind as evidence that their previous position was weak.
-
-In uncertain environments, the opposite is usually true.
-
-A good belief should move when the evidence changes.
-
-Suppose you believe there is a 70% chance a new product will succeed.
-
-Then early customer testing goes badly.
-
-A rigid thinker tries to explain the evidence away.
-
-“The sample is too small.”
-
-“The customers didn’t understand the product.”
-
-“The sales team positioned it incorrectly.”
-
-Some of those explanations might be true. But they can easily become mechanisms for protecting the original belief.
-
-A better question is:
-
-**How much should this evidence change my probability?**
-
-Maybe 70% becomes 60%.
-
-Maybe it becomes 30%.
-
-The amount depends on how surprising the evidence is.
-
-If your prediction said:
-
-> Customers should immediately understand the product,
-
-and customers consistently fail to understand it, the evidence should move your belief substantially.
-
-If your prediction never depended strongly on initial comprehension, the same evidence should move it less.
-
-This is roughly the logic behind Bayesian reasoning.
-
-You begin with a prior belief.
-
-You observe evidence.
-
-You update.
-
-You do not need formal equations to practice this.
-
-The mental habit is enough:
-
-**What did I believe before?**
-
-**What did I observe?**
-
-**How surprising would this observation be if my belief were correct?**
-
-**What should I believe now?**
+This is also why changing your mind should not be treated as embarrassment. In an uncertain environment, a belief that never changes is often a sign that evidence is not getting through.
 
 ## Separate uncertainty from ignorance
 
-People sometimes say:
+“We don’t know” can mean several very different things, and each calls for a different response.
 
-> We don’t know.
+Sometimes uncertainty is irreducible. You can know everything reasonably knowable about a fair coin toss and still not know which side will land up. Sometimes the uncertainty comes from missing information that could be collected. Sometimes it comes from a weak model: you have plenty of data but do not understand the mechanism well enough to predict what happens. And sometimes “we don’t know” simply means that nobody has done the work.
 
-That phrase hides several very different situations.
+These cases matter because organizations often respond to all uncertainty with more analysis. Another deck appears. Another forecast gets built. Another market model is produced. The decimal places multiply, but the uncertainty does not shrink.
 
-Sometimes the world itself is uncertain.
+A better question is: *Which uncertainty can I reduce, and which uncertainty must I live with?*
 
-You can know everything reasonably knowable about a coin toss and still not know whether the next flip will be heads.
+If the missing information is cheap to obtain and likely to change the decision, gather it. If the uncertainty is fundamentally irreducible, additional analysis may have little value. If the model is weak, run an experiment that reveals something about the underlying mechanism.
 
-Sometimes the problem is incomplete information.
+This leads naturally to the idea of value of information. Before doing more research, ask whether the information could realistically change what you do. If the answer is no, then analysis has become a form of delay.
 
-You could know more if you collected additional data.
+The amount of analysis should scale with the stakes, the uncertainty, the reversibility of the decision, and the cost of learning more. Choosing between two restaurants does not deserve three hours of research. Acquiring a company for several billion dollars probably does.
 
-Sometimes the problem is model uncertainty.
+## Size the bet, not just the belief
 
-You have the information but do not understand the mechanism well enough to predict what happens.
+Probability alone is not enough. A decision also depends on the value and danger of the possible outcomes.
 
-And sometimes people simply have not done the work.
+A 90% chance of gaining one dollar and a 10% chance of losing a million dollars is obviously unattractive. A lower-probability opportunity can be compelling if the upside is large and the downside is contained.
 
-These forms of uncertainty should be treated differently.
+Expected value gives a simple language for thinking about this. Imagine one option with a 90% chance of gaining $10 and a 10% chance of losing $10. Its expected value is $8. Another option has a 20% chance of gaining $1,000 and an 80% chance of losing $20. Its expected value is $184. The second choice is far less likely to produce a win on any single attempt, yet it has much higher expected value.
 
-If more information is cheap and valuable, gather it.
+Real decisions are messier than this, but the framework forces two separate questions: how likely is each outcome, and how much does each outcome matter?
 
-If the uncertainty is irreducible, stop pretending more analysis will remove it.
+There is an important complication. Expected value is most useful when you can survive the downside and continue playing. A casino can tolerate losing individual hands because the game repeats thousands of times. A person cannot use the same reasoning for a bet that has a small chance of financial ruin.
 
-If the uncertainty comes from poor models, run experiments that reveal structure.
+This is why good decision-making has to include survival. A strategy can look attractive on average and still be unacceptable if one plausible outcome destroys your ability to benefit from future opportunities. Investors handle this through position sizing and limits on leverage. Companies hold cash reserves. Engineers build redundancy into systems. The forms differ, but the logic is the same: protect the ability to keep playing.
 
-Decision quality improves when you ask:
+Reversibility matters for the same reason. When uncertainty is high, small bets are usually better than large ones. Prototype before building the factory. Pilot with one team before rolling out company-wide. Spend $10,000 before spending $10 million. Early decisions should often be designed to buy information cheaply.
 
-**Which uncertainty can I reduce, and which uncertainty must I live with?**
+As evidence accumulates, commitment can increase. This is one of the most useful ways to think about strategy under uncertainty: not as a single giant decision, but as a sequence of bets whose size grows with confidence.
 
-A surprising amount of corporate analysis is expensive theater aimed at reducing uncertainty that cannot actually be reduced.
+## Disagreement is information
 
-Teams produce another deck.
+When intelligent people disagree, the disagreement itself can be useful evidence.
 
-Another forecast.
+Suppose you believe an acquisition has a 75% chance of succeeding and a colleague you respect says 35%. The instinctive response is to begin defending your view. A better response is to ask what the other person knows, assumes, or values differently.
 
-Another market model.
+Perhaps you agree that the technology is complementary but disagree about integration risk. Perhaps you agree on the facts but weight them differently. Perhaps one of you has information the other lacks. Perhaps you are actually optimizing for different outcomes.
 
-Another spreadsheet.
+Once the disagreement is decomposed, the discussion becomes much more productive. “Good acquisition versus bad acquisition” may turn into a narrower and testable question such as: *How likely is organizational integration to succeed?*
 
-The decimal places multiply.
+This works best when beliefs are not treated as identity. If an idea becomes “Sarah’s strategy” or “Daniel’s architecture,” criticism of the idea can feel like criticism of the person. People then become motivated to defend their previous position rather than improve it.
 
-The uncertainty remains.
+It is healthier to talk about hypotheses: the enterprise-sales hypothesis, the event-driven architecture hypothesis, the assumption that customers will pay for premium support. The goal is to make it socially easier to say, “The evidence is moving against this hypothesis.”
 
-At some point, analysis becomes a way of postponing the bet.
+One particularly useful question is: *What would change your mind?* If the answer is “nothing,” the conversation is no longer about evidence.
 
-## Every decision contains a bet
+For important projects, this question can be made concrete in advance. What observation would make you reduce investment, change direction, or stop entirely? If you define those thresholds before emotional and organizational attachment grows, you are less likely to keep rationalizing a failing thesis later.
 
-The word “bet” can make decision-making sound like gambling.
+## Learn from outcomes without fooling yourself
 
-The useful idea is simpler.
+The hardest part comes after the decision, because outcomes are vivid and memory is unreliable.
 
-A decision commits resources to one possible future while giving up alternatives.
+Suppose a project succeeds. You will be tempted to remember yourself as more confident than you really were. If it fails, the warning signs will seem more obvious in retrospect. This is hindsight bias, and it makes experience much less educational than it appears.
 
-Hiring one executive means not hiring another.
+The specific error of judging a decision mainly by its outcome is sometimes called *resulting*. If Anna puts all her money into a random cryptocurrency because someone at a party says it will double, and it does, she got a good outcome from a bad process. If Ben builds a diversified portfolio after careful analysis and the market crashes the next month, he got a bad outcome from a much better process.
 
-Building feature A means feature B waits.
+The distinction seems obvious when the example is exaggerated. In real life, the line is harder to hold because outcomes dominate attention.
 
-Investing capital in one market means it cannot simultaneously be invested elsewhere.
+A decision journal is one of the simplest defenses. Before an important decision, write down what you believe, your rough confidence, the assumptions that matter, the major upside and downside, what evidence would prove you wrong, and what you expect to happen. Then revisit the entry later.
 
-You are always implicitly saying:
+The point is not bureaucratic documentation. It is to preserve the state of your mind before hindsight rewrites it.
 
-> I believe this future is sufficiently likely, and sufficiently valuable, that I am willing to act on it.
+Over time, the journal becomes a record of your own calibration. Maybe you repeatedly underestimate execution time. Maybe you overestimate the reliability of partnerships. Maybe you are unusually good at judging technical feasibility. Maybe organizational resistance surprises you again and again.
 
-That is a bet.
+This turns decision-making into something that can actually improve.
 
-Once you see decisions this way, a useful question appears:
+Calibration is especially useful because it provides a rough way to test judgment. If you make many predictions at 70% confidence, about 70% of them should eventually be correct. If 95% are correct, you are probably underconfident. If 45% are correct, you are overconfident.
 
-**What exactly am I betting on?**
+No single prediction tells you much. A sequence does.
 
-Consider a company launching an AI coding product.
+That is another reason not to overlearn from one success or failure. A venture investor expects many investments to fail. A product leader expects some experiments to produce negative results. A doctor expects some treatments not to work. The quality of the process becomes visible across many decisions, not one dramatic outcome.
 
-The bet may contain several separate beliefs:
+## A practical way to make an uncertain decision
 
-Developers have a large enough problem.
+For an important decision, most of this framework can be reduced to a short set of questions:
 
-AI can solve enough of that problem.
+- What exactly am I deciding, and what alternatives am I giving up?
+- What outcomes matter, and roughly how likely is each one?
+- What has to be true for this decision to work?
+- Which assumption carries the most risk or uncertainty?
+- What information could materially change my view?
+- Can I test the key uncertainty with a smaller, more reversible bet?
+- What downside could threaten my ability to continue?
+- What evidence would make me change direction or stop?
+- What do I predict will happen, and how confident am I?
 
-The product can reach sufficient reliability.
+Writing down the answers is often enough to expose sloppy thinking. It becomes obvious when a conclusion rests on an assumption nobody has examined, when a probability is mostly intuition dressed up as certainty, or when a team is spending weeks gathering information that is unlikely to change the decision.
 
-Developers will trust it.
+Then make the decision.
 
-Distribution will be effective.
+Later, when the outcome is known, resist the urge to ask only whether you won. Ask whether the bet made sense given what was knowable at the time. Ask which assumptions were wrong. Ask which parts of the outcome were skill and which were luck. Ask what should change in your model before the next decision.
 
-Competitors will not erase the advantage too quickly.
+## The deeper habit
 
-The company can monetize usage.
+The broader lesson is that good judgment is not the ability to predict the future with certainty. Nobody can do that consistently. It is the ability to represent uncertainty honestly enough that you can act well despite it.
 
-“The product will succeed” compresses all of those assumptions into one sentence.
+That means separating the quality of a decision from the quality of its outcome. It means replacing vague confidence with rough probabilities, making assumptions explicit, updating when evidence arrives, and sizing commitments so that uncertainty does not become fatal. It also means recording enough of your thinking that reality can teach you something later.
 
-Good strategy decompresses the bet.
-
-Then the team can ask which assumption is weakest.
-
-## Find the load-bearing assumptions
-
-Most decisions contain one or two beliefs that carry most of the risk.
-
-Suppose you are opening a restaurant.
-
-Dozens of variables matter: menu design, staffing, rent, decor, pricing, marketing, supply chain, reviews.
-
-But perhaps one assumption dominates:
-
-> Enough people in this neighborhood want this cuisine at this price.
-
-If that assumption is wrong, polishing the logo does little.
-
-Good decision-makers search for these load-bearing assumptions.
-
-You can ask:
-
-**What has to be true for this decision to work?**
-
-Then:
-
-**Which of those things am I least certain about?**
-
-And finally:
-
-**What is the cheapest way to learn whether it is true?**
-
-This turns decision-making into experimentation.
-
-A startup does not need to answer every question before launching.
-
-It needs to identify the uncertainties that can kill the company.
-
-## Expected value
-
-Probability alone is not enough.
-
-A 90% chance of gaining $1 and a 10% chance of losing $1 million is usually a terrible bet.
-
-Decisions depend on both probability and consequence.
-
-A simple framework is expected value.
-
-Imagine two choices.
-
-Choice A:
-
-90% chance of gaining $10  
-10% chance of losing $10
-
-Choice B:
-
-20% chance of gaining $1,000  
-80% chance of losing $20
-
-Choice A feels safer.
-
-But the expected value of A is:
-
-0.9 × 10 + 0.1 × (-10) = $8
-
-Choice B:
-
-0.2 × 1000 + 0.8 × (-20) = $184
-
-Choice B has much higher expected value.
-
-Of course, real life adds constraints.
-
-Perhaps losing $20 would bankrupt you.
-
-Perhaps the upside cannot be repeated.
-
-Perhaps the estimates are unreliable.
-
-Expected value is therefore a starting point rather than a complete decision rule.
-
-Its real contribution is forcing two questions:
-
-**How likely is each outcome?**
-
-**How much does each outcome matter?**
-
-People often discuss one while ignoring the other.
-
-## Repetition changes what rationality means
-
-Some bets can be repeated many times.
-
-Others happen once.
-
-This matters.
-
-A casino can tolerate losing individual hands because the game repeats thousands of times.
-
-A person cannot apply the same logic to Russian roulette.
-
-Even if a gamble has positive expected value, the downside may be unacceptable when the game cannot be repeated.
-
-This is why survival matters.
-
-If an investment strategy has excellent average returns but contains a small probability of complete ruin, eventually the ruin probability becomes extremely important.
-
-The principle is simple:
-
-**Never confuse maximizing expected value with maximizing survival.**
-
-You need enough resilience to keep playing.
-
-Companies understand this intuitively when they maintain cash reserves.
-
-Investors understand it when they limit leverage.
-
-Engineers understand it when they build redundancy into systems.
-
-The goal is not to eliminate risk.
-
-The goal is to avoid risks that destroy your ability to benefit from future opportunities.
-
-## Decision quality requires records
-
-Human memory is an unreliable historian.
-
-After an outcome occurs, you will remember your previous beliefs as being closer to reality than they actually were.
-
-If the project succeeds, you will remember having been more confident.
-
-If it fails, you will remember the warning signs as having been more obvious.
-
-This is hindsight bias.
-
-The simplest defense is a decision journal.
-
-Before an important decision, write down:
-
-What you believe.
-
-Your approximate confidence.
-
-The major assumptions.
-
-The expected upside.
-
-The important downside.
-
-What evidence would prove you wrong.
-
-What you expect to happen.
-
-Then revisit the entry later.
-
-This produces a strange experience.
-
-You discover that your past self was less certain than you remember.
-
-Or more certain.
-
-You discover that you worried about risks that never mattered.
-
-You discover risks you never considered.
-
-Over time, patterns emerge.
-
-Maybe you consistently underestimate execution time.
-
-Maybe you overestimate the reliability of partnerships.
-
-Maybe you are unusually good at predicting technical feasibility.
-
-Maybe you systematically ignore organizational resistance.
-
-The journal becomes calibration data for your own judgment.
-
-## Calibration
-
-Imagine 100 predictions where you say you are 70% confident.
-
-Roughly 70 should turn out to be correct.
-
-If 95 are correct, you are underconfident.
-
-If 45 are correct, you are overconfident.
-
-This property is called calibration.
-
-It gives you something rare: a way to measure judgment itself.
-
-You can practice with ordinary predictions.
-
-Will this project ship this quarter?
-
-Will this candidate accept the offer?
-
-Will this meeting end with a decision?
-
-Will this customer renew?
-
-Will the restaurant reservation be available?
-
-The individual questions are trivial.
-
-The accumulated data is useful.
-
-After a few hundred predictions, you can discover what “70% confident” actually means when you say it.
-
-Most people have no idea.
-
-## Beware the narrative machine
-
-Humans are extraordinary storytellers.
-
-Once something happens, the mind quickly produces a coherent explanation.
-
-The company failed because the founders fought.
-
-The candidate succeeded because she had unusually strong motivation.
-
-The war started because diplomatic relations deteriorated.
-
-The stock rose because investors were excited about earnings.
-
-Some of these explanations are correct.
-
-The problem is that narratives are cheap.
-
-After the fact, many explanations can fit the same evidence.
-
-A useful discipline is to ask:
-
-**Did I predict this mechanism beforehand?**
-
-If you predicted that founder conflict would destroy the company, and the company later collapsed after founder conflict, you have learned something.
-
-If you discovered the explanation afterward, your confidence should be lower.
-
-Prediction distinguishes explanation from storytelling.
-
-## Use disagreement as information
-
-When intelligent people disagree, the disagreement itself contains evidence.
-
-Suppose you believe an acquisition has a 75% chance of succeeding.
-
-A colleague you respect says 35%.
-
-The least useful response is to begin defending your position.
-
-The useful question is:
-
-**What does this person know, believe, or weight differently from me?**
-
-Maybe they know something you do not.
-
-Maybe you have different assumptions.
-
-Maybe you agree on the facts but assign different probabilities.
-
-Maybe you value outcomes differently.
-
-Good disagreement decomposes the belief.
-
-For example:
-
-You: “I think the acquisition works because the technology is complementary.”
-
-Colleague: “I agree about the technology. I think the integration will fail because the cultures are incompatible.”
-
-Now the disagreement has become precise.
-
-The argument is no longer “good acquisition versus bad acquisition.”
-
-It is:
-
-**How likely is organizational integration to succeed?**
-
-That question can be investigated.
-
-## Avoid identity-protective reasoning
-
-Beliefs become difficult to update when they become part of identity.
-
-If you are “the person who proposed the strategy,” evidence against the strategy can feel like evidence against you.
-
-Then reasoning becomes defensive.
-
-You search for confirming evidence.
-
-You dismiss critics.
-
-You reinterpret failures.
-
-Organizations suffer from this constantly because decisions become attached to owners.
-
-A useful practice is to separate the person from the hypothesis.
-
-Instead of:
-
-> Sarah’s strategy
-
-say:
-
-> The enterprise-sales hypothesis.
-
-Instead of:
-
-> Daniel’s architecture
-
-say:
-
-> The event-driven architecture.
-
-Now people can attack the idea without attacking the person.
-
-Language changes incentives.
-
-The goal is to create conditions where saying “the hypothesis appears wrong” increases credibility rather than reducing status.
-
-That is difficult culturally and enormously valuable.
-
-## Ask what would change your mind
-
-Before entering an argument, ask yourself:
-
-**What evidence would change my mind?**
-
-If the answer is “nothing,” you are no longer reasoning.
-
-You are defending.
-
-This question can be made more precise.
-
-Suppose you believe a project deserves continued investment.
-
-Ask:
-
-> What observation would make me recommend stopping?
-
-Maybe:
-
-Three consecutive quarters below a certain adoption level.
-
-No improvement after a specific product intervention.
-
-Customer acquisition cost above a threshold.
-
-Failure to solve a known technical bottleneck.
-
-Now you have created an exit criterion before emotional attachment grows.
-
-This is especially useful for projects because sunk costs accumulate quietly.
-
-The longer a team works on something, the harder it becomes to admit the original thesis was wrong.
-
-Precommitting to evidence thresholds protects the future organization from the emotional investment of the present one.
-
-## Confidence should follow evidence
-
-People often mistake confidence of presentation for confidence of belief.
-
-These are unrelated.
-
-Someone can state a weakly supported opinion with enormous conviction.
-
-Someone else can present a well-supported conclusion cautiously.
-
-A better habit is to ask:
-
-**What evidence earns this confidence?**
-
-Consider three claims:
-
-“I think this product will succeed.”
-
-“I think this product has roughly a 70% chance of succeeding.”
-
-“I estimate a 70% chance because three independent pilots show strong retention, the unit economics work at current scale, and the remaining major uncertainty is enterprise distribution.”
-
-The third statement exposes its structure.
-
-Another person can challenge the probability, evidence, or inference.
-
-That makes the belief improvable.
-
-## The goal is better process over many decisions
-
-You cannot tell whether a decision process is good from one outcome.
-
-You need a sample.
-
-A venture capitalist expects many investments to fail.
-
-A doctor expects some treatments not to work.
-
-A product leader expects some experiments to produce negative results.
-
-If every experiment succeeds, the organization may be taking very little risk.
-
-The proper unit of evaluation is therefore often a portfolio of decisions.
-
-Over twenty product bets:
-
-How often were the initial probabilities approximately right?
-
-Which assumptions repeatedly failed?
-
-Which categories of uncertainty were underestimated?
-
-Did the organization kill weak projects quickly?
-
-Did successful projects receive more investment?
-
-Were catastrophic risks controlled?
-
-Decision quality becomes visible over sequences.
-
-This also changes the emotional relationship with failure.
-
-A failed experiment may be excellent news if it cheaply disproves an important hypothesis.
-
-A successful project may be dangerous if it succeeds for reasons nobody understands.
-
-The question becomes:
-
-**What did this outcome teach us about the process that produced it?**
-
-## Luck is real
-
-Modern culture has an uncomfortable relationship with luck.
-
-Successful people are encouraged to explain their success as the result of strategy, discipline, insight, or character.
-
-Sometimes that is true.
-
-It is rarely the whole story.
-
-Careers contain luck.
-
-Businesses contain luck.
-
-Relationships contain luck.
-
-Markets contain luck.
-
-History contains extraordinary amounts of luck.
-
-Recognizing luck does not diminish skill.
-
-It improves the model.
-
-A strong poker player can lose to a weak player in one hand.
-
-Across ten thousand hands, skill becomes easier to see.
-
-Many areas of life offer far fewer repetitions.
-
-That makes humility rational.
-
-When something goes well, ask:
-
-**Which parts were skill?**
-
-**Which parts were luck?**
-
-When something goes badly, ask the same questions.
-
-The answer is usually some mixture.
-
-## Make small bets when uncertainty is high
-
-When you know little, large commitments are dangerous.
-
-A better strategy is often to buy information cheaply.
-
-Prototype.
-
-Pilot.
-
-Interview customers.
-
-Run the experiment.
-
-Launch in one market.
-
-Test with one team.
-
-Spend $10,000 before spending $10 million.
-
-This creates an important relationship:
-
-**The less you know, the more valuable reversibility becomes.**
-
-Early decisions should often preserve options.
-
-As evidence accumulates, commitment can increase.
-
-This is one reason startups begin with prototypes rather than factories.
-
-It is also why organizations get into trouble when internal processes require enormous commitments before learning begins.
-
-Good decision systems make the first bet small and the later bets larger.
-
-## Know when to stop thinking
-
-Decision theory can become another form of procrastination.
-
-There is always another scenario to analyze.
-
-Another probability to refine.
-
-Another expert to consult.
-
-The question is whether additional thinking has positive expected value.
-
-Suppose you are choosing between two restaurants.
-
-Spending three hours analyzing reviews is irrational because the decision has low stakes.
-
-Suppose you are acquiring a company for $5 billion.
-
-Another week of diligence may be extremely valuable.
-
-The amount of analysis should scale with:
-
-The stakes.
-
-The uncertainty.
-
-The reversibility of the decision.
-
-The cost of additional information.
-
-A useful question is:
-
-**What information could realistically change the decision?**
-
-If no likely information would change it, decide.
-
-## A compact decision method
-
-For an important uncertain decision, you can reduce most of this essay to a short sequence of questions.
-
-What exactly am I deciding?
-
-What outcomes are possible?
-
-How likely is each important outcome?
-
-How valuable or damaging is each one?
-
-What assumptions must be true?
-
-Which assumption carries the most uncertainty?
-
-What information could materially change my view?
-
-What is the cheapest way to obtain that information?
-
-What would make me reverse the decision later?
-
-What do I predict will happen?
-
-Write the answers down.
-
-Then act.
-
-Later, when reality arrives, resist the temptation to ask only whether you won.
-
-Ask whether the bet was sensible.
-
-Ask what you misunderstood.
-
-Ask which uncertainty resolved through luck.
-
-Ask which part of your model deserves more confidence.
-
-Then update.
-
-That is the deeper discipline.
-
-The world does not provide certainty before demanding decisions. Good judgment therefore does not come from eliminating uncertainty. It comes from representing uncertainty clearly enough that you can act intelligently inside it.
-
-You make the best bet available.
-
-You observe what happens.
-
-You learn.
-
-And you make the next bet with a slightly better model of the world.
+The world rarely gives you the information you want before it demands a decision. So the practical goal is not certainty. It is to make the best bet available, observe what happens, update your model, and make the next bet from a slightly better understanding of the world.
