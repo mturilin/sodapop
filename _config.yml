@@ -1,0 +1,26 @@
+# Site
+title:       sodapop
+description: Strategy and product articles.
+url:         https://mturilin.github.io
+baseurl:     /sodapop          # project page lives at a subpath - every URL needs | relative_url
+permalink:   pretty
+lang:        en
+
+author:
+  name:  Mikhail Turilin
+  email: mikhail@turilin.com
+
+plugins:
+  - jekyll-feed
+
+# Posts need only title + date in front matter; the layout is applied here.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - tools/
